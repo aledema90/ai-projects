@@ -1,0 +1,21 @@
+# Ambiente virtuale
+venv/
+env/
+
+# Database vettoriale (si rigenera dallo script, non serve versionarlo)
+kb_db/
+
+# Log locali
+logs.db
+
+# File di sistema
+.DS_Store
+__pycache__/
+*.pyc
+
+# Variabili d'ambiente / chiavi (importante se in futuro aggiungi Claude API)
+.env
+
+# Cursor / editor
+.vscode/
+.idea/
