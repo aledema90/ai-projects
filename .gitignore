@@ -1,0 +1,70 @@
+# --- OS ---
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Env & secrets (ogni progetto) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Node / JS ---
+node_modules/
+.npm/
+.next/
+.nuxt/
+dist/
+coverage/
+*.tsbuildinfo
+
+# --- Local DBs / caches / logs ---
+*.db
+*.sqlite
+*.sqlite3
+.cache/
+logs/
+*.log
+
+# --- AI / ML local artifacts ---
+*.gguf
+*.bin
+*.pt
+*.onnx
+.chroma/
+.lancedb/
+kb_db/
+
+# --- Nested independent git repos ---
+# Se una subfolder è un repo git a sé (ha .git/), non tracciarla dal parent.
+# Decommenta / adatta quando spliti i progetti:
+ticket-agent/
+# altro-progetto/
