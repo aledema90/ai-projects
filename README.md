@@ -1,36 +1,36 @@
 # ai-projects
 
-Contenitore multiprogetto per esperimenti e prototipi basati su AI.
+Multi-project container for AI experiments and prototypes.
 
-Ogni cartella è un progetto indipendente: ha il proprio README, dipendenze e (eventualmente) repo dedicato. Qui troverai agent, pipeline RAG, tool e prove rapide — senza pretesa di prodotto finito.
+Each folder is an independent project: its own README, dependencies, and (optionally) its own repo. You'll find agents, RAG pipelines, tools, and quick spikes — not production products.
 
-## Progetti
+## Projects
 
-| Cartella | Descrizione |
+| Folder | Description |
 | --- | --- |
-| [`ticket-agent/`](./ticket-agent) | Agente multi-step che classifica e risponde a ticket di supporto BIM, con escalation umana a bassa confidenza |
+| [`ticket-agent/`](./ticket-agent) | Multi-step agent that classifies and answers BIM support tickets, with human escalation on low confidence |
 
-## Come è organizzato
+## Layout
 
 ```
 ai-projects/
-├── README.md          ← questo file
+├── README.md          ← this file
 ├── LICENSE
-├── .gitignore         ← regole comuni a tutti i progetti
-└── <nome-progetto>/   ← un esperimento = una cartella
+├── .gitignore         ← shared ignore rules for all projects
+└── <project-name>/    ← one experiment = one folder
     ├── README.md
     └── ...
 ```
 
-- **Root**: overview, licenza, ignore condivisi.
-- **Subfolder**: codice e docs del singolo esperimento. Apri il README della cartella per setup e dettagli.
+- **Root**: overview, license, shared ignores.
+- **Subfolder**: that experiment's code and docs. Open the folder README for setup and details.
 
-## Aggiungere un progetto
+## Adding a project
 
-1. Crea una cartella in root (`mkdir mio-esperimento`).
-2. Aggiungi un `README.md` con problema, approccio e come avviarlo.
-3. Se serve, un `.gitignore` locale (quello root copre già venv, `.env`, DB locali, ecc.).
+1. Create a folder at the root (`mkdir my-experiment`).
+2. Add a `README.md` with the problem, approach, and how to run it.
+3. Add a local `.gitignore` if needed (the root one already covers venvs, `.env`, local DBs, etc.).
 
-## Note
+## Notes
 
-Stack e modelli variano per progetto (locale con Ollama, API cloud, ecc.). Controlla sempre il README della cartella prima di installare o eseguire qualcosa.
+Stack and models vary by project (local Ollama, cloud APIs, etc.). Always check the folder README before installing or running anything.
