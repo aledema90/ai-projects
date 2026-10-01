@@ -18,12 +18,20 @@ required fields, template phrases), customer material in `context/customers/` (o
      the ticket's title, existing text, linked sources and customer material. Mark gaps `[to define]`.
    - blocked, shipped-but-open, stale: the fix is a question for the user, not a change
      (`ask: unblock decision?`, `ask: close?`).
-3. Prioritize tickets from step 2 flagged IMMINENT or UNDER-PRIORITIZED first.
+3. Order the actions so tickets from step 2 flagged UNDER-PRIORITIZED come first among those that break
+   a rule.
+4. Tickets flagged IMMINENT in step 2 (for example an overdue due date) that break no `HY#` rule are
+   NOT actions: gate A rule H-1 requires every numbered action to cite an `HY#` rule. List them on
+   ONE line right after the `note:` line, in the form
+   `FYI from step 2 (no HY rule, not an action): <id> <due date> <overdue|imminent>, <status>; ... ask: is the due date still valid?`
+   They are not counted in `with violations` or `proposed fixes`.
 
 ## Output format (exactly)
 
 ```
 HYGIENE
+note: <limits, for example rules that could not be assessed>
+FYI from step 2 (no HY rule, not an action): <only if step 2 flagged IMMINENT items with no HY violation>
 H1 | <ticket id> | <url> | rules: HY2, HY7
    fix: add label `<x>`; description draft below
    description draft:

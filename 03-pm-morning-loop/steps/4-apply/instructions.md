@@ -15,7 +15,7 @@ content approved, including human edits.
 2. Execute actions **one at a time**, in order. For each:
    - `H#`: update the ticket: add the approved labels, set the approved fields, replace the description
      with the approved draft. Change nothing else on the ticket.
-   - `T#`: create the ticket with the approved title, labels and description in `backlog_project`.
+   - `T#`: create the ticket with the approved title, labels and description in the project named on the approved draft (one of the `backlog_projects` paths).
 3. After each action, record what the tool returned (ticket id and url).
 4. On an error: stop that action, record the error, continue with the next action. Never retry a write.
 5. Never perform an action that is not in the approved list, and never alter approved content.
