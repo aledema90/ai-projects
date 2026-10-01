@@ -42,6 +42,21 @@ For step `S` with folder `steps/<S>/`:
 5. **State.** Write the step file after every transition (maker done, verdict, gate B decision).
    Only the approved output is passed to later steps.
 
+## What the user sees (applies to every message you write)
+
+1. **Start every message with a status line:** `Step N/4 · <Name> · <state>`, where state is one of
+   `in corso`, `da approvare`, `fatto`, `bloccato`. Example: `Step 2/4 · Align · da approvare`.
+2. **No rule ids in chat.** Never show `HY#`, `C#`, `A#`, `H-#`, `P-#`, `X-#` or checker round numbers.
+   Describe the problem in words ("manca il team", "descrizione vuota"). Those ids stay in the state files.
+3. **Name actions in plain words**, with the ticket: "Aggiungere il team a #1798", not "H1". You may keep a
+   short number for the user to reply with (`approve 1 3`), shown next to the plain name.
+4. **Ask one thing at a time, and say what happens next:** end every gate B message with the choices and
+   a line `Dopo la tua risposta: <what runs next>`.
+5. **Keep technical detail in the state files**, not in chat: checker verdicts, retries, raw counts. Mention a
+   retry or a failure only if it changes what the user must do.
+6. Goals and to-dos are named in words as well ("obiettivo Popcons", "to-do: Risposta a Dhairya"), never by
+   `G1`/`L21`.
+
 ## Steps
 
 ### 1. Collect (`steps/1-collect/`) - gate B: none (read-only)

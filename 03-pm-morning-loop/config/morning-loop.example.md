@@ -20,7 +20,10 @@ Keep the key names; commands, sources and steps read them by name.
 
 ### backlog
 
-- backlog_project: "<project or group path in your backlog tool>"
+- backlog_projects:                    # one entry per project or group you want to read
+  - path: "<project or group path in your backlog tool>"
+    rules_file: context/backlog-rules.md   # or `none`: step 3 lane H then skips this project
+    serves_goal: G1                        # optional: the goal this backlog mainly serves
 - backlog_types: ["issue"]
 - backlog_exclude_labels: []           # items with any of these labels are out of scope
 - rules_file: context/backlog-rules.md
