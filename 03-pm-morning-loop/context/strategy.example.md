@@ -1,27 +1,24 @@
 # Strategy
 
 Copy this file to `context/strategy.md` (git-ignored) and replace everything.
-The checker is only as good as this file: vague goals give a vague checker.
-Be specific, measurable and dated.
+Steps 2 and 3 check against this file. Vague goals give a vague checker: be specific, measurable, dated.
 
 ## Goals (this quarter)
 
-1. <Goal, with a measurable outcome and date. E.g. "Raise checkout conversion from 2.1% to 2.6% by 30 Nov">
-2. <Goal>
-3. <Goal>
+Number them. Steps cite them by number ("serves G2").
 
-## Non-goals (things I am deliberately NOT doing now)
+- G1: <Goal with a measurable outcome and date. E.g. "Raise checkout conversion from 2.1% to 2.6% by 30 Nov">
+- G2: <Goal>
+- G3: <Goal>
 
-- <E.g. "No new integrations until the checkout goal is met">
-- <...>
+## Non-goals (deliberately NOT doing now)
+
+- N1: <E.g. "No new integrations until G1 is met">
+- N2: <...>
 
 ## Standing commitments
 
-- <Recurring or fixed obligations that always outrank new work, with dates>
-
-## Who and what is high-leverage
-
-- <People, customers or systems where a small action unblocks a lot>
+- C1: <Recurring or fixed obligations that always outrank new work, with dates>
 
 ## Tie-breakers
 

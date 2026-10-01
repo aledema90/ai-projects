@@ -1,34 +1,45 @@
 # Morning Loop config
 
 Copy this file to `config/morning-loop.local.md` (git-ignored) and fill it in.
-Keep the key names; commands read them by name.
+Keep the key names; commands, sources and steps read them by name.
 
 ## General
 
-- max_priorities: 5          # most items the ranker may propose
-- max_retries: 2             # maker/checker rounds before showing "unverified"
-- daily_capacity: "6 focus hours"   # used by rubric R4 (S ≈ 1h, M ≈ 2-3h, L ≈ half day+)
-- language: en
+- max_retries: 2              # maker/checker rounds before a step is reported as failed
+- imminent_days: 3            # "imminent" deadline window
+- language: en                # language of the output; drafts keep the language of their source
 
-## Sources
+## Sources (in order)
 
-Enabled sources, in order. Each name matches a file in `sources/`.
-
-- tracker
-- obsidian-todos
+- backlog
+- notes
+- teams
+- calendar
 
 ## Source settings
 
-### tracker
+### backlog
 
-- mcp_server: tracker                 # server name in .mcp.json
-- scope: "assigned to me, open"       # free text, interpreted by sources/tracker.md
-- project: "<project or group path>"
-- lookback_days: 14                   # also fetch items updated in this window
+- backlog_project: "<project or group path in your backlog tool>"
+- backlog_types: ["issue"]
+- backlog_exclude_labels: []           # items with any of these labels are out of scope
+- rules_file: context/backlog-rules.md
 
-### obsidian-todos
+### notes
 
 - vault_path: "/path/to/your/vault"
-- todo_file: "Todo.md"                # relative to vault_path
-- meetings_folder: "Meetings"         # relative to vault_path
-- meetings_lookback_days: 7
+- todo_file: "Todo.md"                 # relative to vault_path
+- meetings_folder: "Meetings"          # used as customer/meeting context in step 3
+
+### teams
+
+- chat_lookback: yesterday             # fixed by design; do not widen
+- chat_exclude: []                     # chat names to ignore
+
+### calendar
+
+- prep_exclude: ["Focus", "Lunch", "OOO"]   # event titles that never get a prep note
+
+## Customer material (step 3)
+
+- customers_dir: context/customers     # transcripts, digests, notes about customers. Optional.

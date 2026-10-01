@@ -1,15 +1,11 @@
 # state/
 
-This folder is the loop's memory. Everything here except this file and the
-template is git-ignored, so your data never ends up in the public repository.
+The loop's memory. Everything here except this file and `run.template.md` is git-ignored.
 
-| File | Written by | Purpose |
+| Path | Written by | Purpose |
 | --- | --- | --- |
-| `last-run.md` | `/morning` | Yesterday's priorities and which items were already surfaced, so the loop does not repeat itself. |
-| `history.md` | `/morning` | One line per run: date, verdict, retries, sources that worked. Used by `/loop-health`. |
-| `feedback-log.md` | `/teach` | Every correction you made and which file it changed. Used by `/loop-health`. |
+| `<date>/1-collect.md` ... `4-apply.md` | `/morning` | One file per step per day: status, retries, gate A verdict, gate B decision, output. Lets a run resume (`/morning resume`) or restart from a step (`/morning from 2`). |
+| `history.md` | `/morning` | One line per run. Read by `/loop-health`. |
+| `feedback-log.md` | `/teach` | Each correction and the file it changed. Read by `/loop-health`. |
 
-The files are created automatically on the first run. To see the expected format
-of `last-run.md`, open `last-run.template.md`.
-
-Deleting a file here is safe: the loop treats it as a fresh start.
+Deleting a day folder is safe: the loop treats it as a fresh start for that day.
