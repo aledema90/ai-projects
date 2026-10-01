@@ -1,0 +1,18 @@
+# Personal data: never publish
+config/*.local.md
+context/strategy.md
+context/backlog-rules.md
+context/customers/*
+!context/customers/README.md
+.mcp.json
+
+# Loop memory (keep README and template only)
+state/*
+!state/README.md
+!state/run.template.md
+
+# Claude Code local files
+.claude/settings.local.json
+.claude/worktrees/
+
+.DS_Store

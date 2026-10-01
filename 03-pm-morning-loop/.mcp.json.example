@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tracker": {
+      "type": "http",
+      "url": "https://your-tracker-mcp.example.com/mcp"
+    },
+    "workspace": {
+      "type": "http",
+      "url": "https://your-chat-and-calendar-mcp.example.com/mcp"
+    }
+  }
+}
