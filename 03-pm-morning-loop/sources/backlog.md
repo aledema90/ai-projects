@@ -18,7 +18,7 @@ If the tool is not connected: `SOURCE_FAILED: backlog tool not available`.
    page. Skip items carrying any label in `backlog_exclude_labels`, and report how many you skipped.
 2. For each item capture: id, title, url, state, labels, assignee(s), milestone/iteration, due date,
    created and updated dates, parent epic or group if the tool gives it cheaply, and a description
-   status: `empty | template | filled`. Keep the description text only for items you need it for in
+   status: `empty | template | filled` (write `not-assessed` for a project whose `rules_file` is `none`). Keep the description text only for items you need it for in
    step 3 hygiene (the checker will have access via `raw`).
 3. Map to the common format:
    - `fields`: `labels`, `assignees`, `milestone`, `priority` (from the priority label, or `none`),

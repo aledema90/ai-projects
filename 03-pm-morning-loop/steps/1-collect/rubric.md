@@ -12,8 +12,9 @@ how complete the output looks.
   to-do, or a checked one completed in the last 3 days marked `done`.
 - **C4 Item shape.** Every item has `id`, `source`, `title`, `url`, `type`, `updated`, `due`. Unknown
   values are written `none` or `[unknown]`, never left out.
-- **C5 Backlog fields.** Every `backlog` item states `priority`, `due`, `labels`, `description_status`
-  (value `none` when absent).
+- **C5 Backlog fields.** Every `backlog` item states `priority`, `due`, `labels`, `project`,
+  `description_status` (value `none` when absent). For a project whose `rules_file` is `none` in the
+  config, `description_status` may be `not-assessed`.
 - **C6 No fabrication.** Pick any 3 items per source and confirm they exist in the raw data with the same
   id, title and date. Any miss fails the rule.
 - **C7 Chat filter applied.** `teams` output states scanned vs kept counts, and each kept item has a
