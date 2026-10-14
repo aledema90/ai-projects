@@ -54,7 +54,7 @@ For step `S` with folder `steps/<S>/`:
    a line `Dopo la tua risposta: <what runs next>`.
 5. **Keep technical detail in the state files**, not in chat: checker verdicts, retries, raw counts. Mention a
    retry or a failure only if it changes what the user must do.
-6. Goals and to-dos are named in words as well ("obiettivo Popcons", "to-do: Risposta a Dhairya"), never by
+6. Goals and to-dos are named in words as well ("obiettivo app mobile", "to-do: risposta al cliente"), never by
    `G1`/`L21`.
 
 ## Steps

@@ -9,6 +9,7 @@ Each folder is an independent project: its own README, dependencies, and (option
 | Folder | Description |
 | --- | --- |
 | [`ticket-agent/`](./ticket-agent) | Multi-step agent that classifies and answers BIM support tickets, with human escalation on low confidence |
+| [`04-virtual-ale/`](./04-virtual-ale) | Product-owner agent loop: GitLab + Teams + meeting transcripts → de-duplicated requests linked to GitLab issues, updates applied after human approval |
 
 ## Layout
 

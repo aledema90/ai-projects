@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "gitlab": {
+      "type": "http",
+      "url": "https://<your-gitlab-host>/api/v4/mcp"
+    },
+    "m365": {
+      "type": "http",
+      "url": "https://<your-microsoft-365-mcp>/mcp"
+    }
+  }
+}
