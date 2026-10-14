@@ -18,6 +18,18 @@ Every step has: an instruction file, a maker, a checker (rubric), gate A (binary
 (human approval, where the step says so) and a state file. Everything that defines behaviour is
 Markdown. There is no application code.
 
+## Plain-language requests
+
+Operators do not need to know the commands. Map what they ask, in any language, to the command and run
+it:
+
+- "set me up", "configure the loop", "connect my accounts", or `config/po-loop.local.md` is missing ->
+  `/setup`
+- "run the loop", "update the issues", "what changed this week", "do the PO check" -> `/po`
+- "continue", "pick up where we stopped" -> `/po resume`
+- "that was wrong, it should ...", "from now on ..." -> `/teach <their correction>`
+- "what can you do?", "how does this work?" -> explain the four commands above in three lines.
+
 ## Where things live
 
 - `.claude/commands/`: `/setup` (layer 0), `/po` (orchestrator), `/teach`

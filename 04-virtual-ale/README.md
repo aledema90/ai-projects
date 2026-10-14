@@ -43,13 +43,21 @@ A = checker, binary pass/fail      B = you approve, edit or reject
 
 ## Handover quick start (for the next operator)
 
+No terminal needed.
+
 1. Connect **GitLab** and **Microsoft 365** at claude.ai → Customize → Connectors, signed in as yourself.
-2. Open Claude Code in this folder: `claude`.
-3. Run `/setup` and answer its questions (groups, where new issues go, Teams channels, chats, meetings
-   to skip, issue template if `context/template.md` is missing).
-4. Run `/po`. Approve, edit or reject the proposed updates and new issues at the gate.
-5. New issues follow `context/template.md`. Changes to existing issues are logged as dated lines in
-   their change-log section (see `context/issue-format.md`); existing text is never rewritten.
+2. Open the Claude desktop app → **Code** tab → new session → choose this folder.
+3. Say "set me up" (or `/setup`) and answer its questions: groups, where new issues go, Teams channels,
+   chats, the meeting recorder, meetings to skip, the issue template if `context/template.md` is missing.
+4. Whenever you want an update, say "run the PO loop" or "what changed this week?" (or `/po`). Approve,
+   edit or reject the proposed changes and new issues when it asks. Nothing reaches GitLab before that.
+5. To correct the loop, say what was wrong ("that message is personal, skip chats like that"); it becomes
+   a permanent rule through `/teach`.
+6. Optional: ask "run the PO loop every Monday at 9:00" to schedule it. The computer and the app must be
+   on at that time; the run still waits for your approval.
+
+New issues follow `context/template.md`. Changes to existing issues are logged as dated lines in their
+change-log section (see `context/issue-format.md`); existing text is never rewritten.
 
 ## Safety model
 
@@ -64,7 +72,7 @@ A = checker, binary pass/fail      B = you approve, edit or reject
 
 ## Known limits
 
-- Started by the operator. No schedule is set up.
+- Started by the operator, by asking in chat or on a schedule set up from the app.
 - The meeting recorder only mails attendees: the loop sees the meetings the operator was in.
 - Requests about products outside the configured groups are listed as `OUT OF SCOPE`, with no action.
 - Teams search lags on wide windows; the source reads one-day slices.
